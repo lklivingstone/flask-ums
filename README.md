@@ -68,7 +68,7 @@ That's it! You can now access the Flask project in your web browser and begin de
 
 ## ENDPOINTS:
 
-REGISTER User:
+### REGISTER User:
 
 POST [http://127.0.0.1:5000/api/auth/register](http://127.0.0.1:5000/api/auth/register)
 
@@ -88,7 +88,7 @@ Example:
 }
 ```
 
-Login User:
+### Login User:
 
 POST [http://127.0.0.1:5000/api/auth/login](http://127.0.0.1:5000/api/auth/login)
 
@@ -108,7 +108,7 @@ Example:
 }
 ```
 
-CREATE Task:
+### CREATE Task:
 
 http://127.0.0.1:5000/api/task
 
@@ -137,7 +137,7 @@ Example:
 }
 ```
 
-GET ALL Tasks (with pagination):
+### GET ALL Tasks (with pagination):
 
 http://127.0.0.1:5000/api/tasks?page=3&per_page=3
 
@@ -154,7 +154,7 @@ Headers:
 Authorization : Bearer {access_token}
 ```
 
-GET Task:
+### GET Task:
 
 GET [http://127.0.0.1:5000/api/task/2](http://127.0.0.1:5000/api/task/2)
 
@@ -165,7 +165,7 @@ Authorization : Bearer {access_token}
 ```
 
 
-UPDATE Task:
+### UPDATE Task:
 
 PUT [http://127.0.0.1:5000/api/task/2](http://127.0.0.1:5000/api/task/2)
 
@@ -185,7 +185,7 @@ Request Body (Example):
 }
 ```
 
-DELETE Task:
+### DELETE Task:
 
 DELETE [http://127.0.0.1:5000/api/task/2](http://127.0.0.1:5000/api/task/2)
 
