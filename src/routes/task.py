@@ -1,11 +1,13 @@
 from flask import jsonify, request, abort, Blueprint
 from datetime import date, datetime
+from flask_jwt_extended import jwt_required
 
 from src.db import get_db
 
 task_blueprint= Blueprint("task", __name__, url_prefix="/api")
 
 @task_blueprint.route("/task", methods=['POST'])
+@jwt_required()
 def create_task():
     if request.method=="POST":
         db = get_db()
@@ -59,6 +61,7 @@ def create_task():
         return jsonify({"message": "Task created successfully"}), 201
 
 @task_blueprint.route("/tasks", methods=['GET'])
+@jwt_required()
 def get_all_tasks():
     if request.method=="GET":
         page = int(request.args.get('page', 1))
@@ -102,6 +105,7 @@ def get_all_tasks():
 
 
 @task_blueprint.route("/task/<int:id>", methods=['GET', 'PUT', 'DELETE'])
+@jwt_required()
 def task(id=0):
     if request.method=="GET":
         db = get_db()
