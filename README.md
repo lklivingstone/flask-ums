@@ -6,7 +6,9 @@ This is a Flask project that includes instructions on how to set up and run the 
 
 To get started, clone this GitHub repository to your local machine using the following command:
 
+```
 git clone https://github.com/lklivingstone/flask-ums.git
+```
 
 Set Up a Virtual Environment
 It is recommended to use a virtual environment to isolate the project's dependencies. Follow these steps to create and activate a virtual environment:
@@ -14,13 +16,15 @@ It is recommended to use a virtual environment to isolate the project's dependen
 Change into the project directory:
 
 ```
-cd your-project
+cd flask-ums
 ```
 
 Create a virtual environment using venv or virtualenv. Run one of the following commands:
 
 For venv (Python 3):
 ```
+python -m venv env
+or 
 python3 -m venv env
 ```
 For virtualenv:
@@ -51,9 +55,19 @@ Before running the project, run the following command:
 mkdir instance
 flask --app src init-db
 ```
-
 This will create the necessary database tables.
+```
+touch .env
+```
 
+If it does not work:
+Create a file in root directory with filename: ".env"
+Copy paste the following content inside the .env file:
+
+```
+export SECRET_KEY=123
+export JWT_SECRET_KEY='lakfghnolvnsdvsa'
+```
 
 Run the Development Server
 
