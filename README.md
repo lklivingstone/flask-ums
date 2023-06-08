@@ -51,11 +51,12 @@ pip install -r requirements.txt
 
 
 Before running the project, run the following command:
+This will create the necessary database tables.
 ```
 mkdir instance
 flask --app src init-db
 ```
-This will create the necessary database tables.
+
 ```
 touch .env
 ```
@@ -124,7 +125,7 @@ Example:
 
 ### CREATE Task:
 
-http://127.0.0.1:5000/api/task
+POST [http://127.0.0.1:5000/api/task](http://127.0.0.1:5000/api/task)
 
 Request Body:
 ```
@@ -153,7 +154,7 @@ Example:
 
 ### GET ALL Tasks (with pagination):
 
-http://127.0.0.1:5000/api/tasks?page=3&per_page=3
+GET [http://127.0.0.1:5000/api/tasks?page=3&per_page=3](http://127.0.0.1:5000/api/tasks?page=3&per_page=3)
 
 Params:
 ```
