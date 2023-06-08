@@ -1,11 +1,10 @@
-# Django Todo
+# Flask UMS
 
-This is a Django project that includes instructions on how to set up and run the project locally.
+This is a Flask project that includes instructions on how to set up and run the project locally.
 
 ## Clone the Repository
 
 To get started, clone this GitHub repository to your local machine using the following command:
-
 
 git clone https://github.com/lklivingstone/django-todo.git
 
@@ -38,27 +37,33 @@ On Windows:
 ```
 .\env\Scripts\activate
 ```
+
 Install Dependencies
 
 Once the virtual environment is activated, install the project dependencies using pip:
 ```
 pip install -r requirements.txt
 ```
-Apply Migrations
 
-Before running the project, apply the database migrations using the following command:
+
+Before running the project, run the following command:
 ```
-python manage.py makemigrations
-python manage.py migrate
+mkdir instance
+flask --app src init-db
 ```
-This will create the necessary database tables based on the project's models.
+
+This will create the necessary database tables.
+
 
 Run the Development Server
 
-Finally, start the Django development server to run the project locally:
+Finally, start the Flask development server to run the project locally:
 ```
-python manage.py runserver
+flask run
 ```
-The development server should start running at http://127.0.0.1:8000/
 
-That's it! You can now access the Django project in your web browser and begin development or testing.
+The development server should start running at http://127.0.0.1:5000/. You can check the console for the url.
+
+That's it! You can now access the Flask project in your web browser and begin development or testing.
+
+## ENDPOINTS:
